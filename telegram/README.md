@@ -1,32 +1,58 @@
-#  Example Java Gradle Application featuring Telegram and MQTT 
+# Example MQTT + TelegramBot Application
+
+Example application on how to use Telegram as interface for a mqtt based sensor monitoring application. 
+
+This application notifies registered users about temperature changes. 
 
 ## Requirements
- - Java JDK 17
-
-## Recommendations
- - Use IntelliJ IDEA
+ - Python3 3.9.*
 
 ## Getting started
-- Clone the repository
+ - Clone the repository
 ```bash
-git clone https://github.com/alptbz/mqtttelegramdemojava
+git clone https://github.com/alptbz/mqtttelegramdemo
 ```
-- Change into repository
+ - Change into repository
 ```bash
-cd mqtttelegramdemojava/
+cd mqtttelegramdemo
 ```
-- Copy config example and edit accordingly
+ - Create venv
 ```bash
-cp config.properties.example config.properties
+python -m venv env
 ```
-- Open Folder with IntelliJ IDEA
-- Run gradle
-- Fix gradle errors (mostly wrong version, java 17 requires gradle 7.2)
-- Go to `src/main/ch.alptbz.mqtttelegramdemo/Main`, right click file, select run
+ - Activate enviroment
+```bash
+# Linux:
+source env/bin/activate
 
+# Windows (PowerShell):
+.\env\Scripts\activate
+
+# Windows (bash):
+source env/Scripts/activate
+```
+ - Install requirements
+```bash
+python -m pip install -r requirements.txt
+```
+ - Create own config.py and insert credentials and connection information
+```bash
+cp config.template.py config.py
+vim config.py
+```
+ - Run
+```bash
+python main.py
+```
+
+## Notes
+ - Use `python3` instead of `python` if you're using Linux
+ - See [python-telegram-bot examples](https://github.com/python-telegram-bot/python-telegram-bot/tree/master/examples) for more telegram examples (Inline menus, custom keyboards and many more)
+  
 ## Telegram Bot
-You can create a new TelegramBot and acquire an API Token using BotFather. All information related to Telegram Bots can be found [here](https://core.telegram.org/bots#6-botfather).
+You can create a new TelegramBot and acquire an API Token using BotFather. All information related to Telegram Bots can be found [here](https://core.telegram.org/bots#6-botfather). 
 
 ## Links
-- https://github.com/eclipse/paho.mqtt.java
-- https://github.com/pengrad/java-telegram-bot-api
+ - https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
+ - https://python-telegram-bot.readthedocs.io/en/stable/
+ - https://pypi.org/project/paho-mqtt/
