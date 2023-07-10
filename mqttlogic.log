@@ -2812,3 +2812,71 @@ telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.tel
 2023-07-11 01:10:41,788 - telegram.bot - DEBUG - []
 2023-07-11 01:10:41,788 - telegram.bot - DEBUG - Exiting: get_updates
 2023-07-11 01:10:41,788 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:10:51,835 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:10:51,835 - telegram.bot - DEBUG - []
+2023-07-11 01:10:51,836 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:10:51,836 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:11:01,963 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:11:01,965 - telegram.bot - DEBUG - []
+2023-07-11 01:11:01,966 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:11:01,967 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:11:12,003 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:11:12,005 - telegram.bot - DEBUG - []
+2023-07-11 01:11:12,005 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:11:12,005 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:11:22,047 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:11:22,048 - telegram.bot - DEBUG - []
+2023-07-11 01:11:22,048 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:11:22,048 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:11:32,090 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:11:32,091 - telegram.bot - DEBUG - []
+2023-07-11 01:11:32,091 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:11:32,092 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:11:42,132 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:11:42,133 - telegram.bot - DEBUG - []
+2023-07-11 01:11:42,133 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:11:42,133 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:11:52,167 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:11:52,168 - telegram.bot - DEBUG - []
+2023-07-11 01:11:52,168 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:11:52,168 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:12:02,239 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:12:02,242 - telegram.bot - DEBUG - []
+2023-07-11 01:12:02,242 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:12:02,242 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:12:12,408 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:12:12,408 - telegram.bot - DEBUG - []
+2023-07-11 01:12:12,408 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:12:12,408 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:12:22,575 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:12:22,576 - telegram.bot - DEBUG - []
+2023-07-11 01:12:22,576 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:12:22,576 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:12:32,629 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:12:32,631 - telegram.bot - DEBUG - []
+2023-07-11 01:12:32,631 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:12:32,631 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:12:42,677 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:12:42,677 - telegram.bot - DEBUG - []
+2023-07-11 01:12:42,677 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:12:42,677 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:12:52,737 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:12:52,738 - telegram.bot - DEBUG - []
+2023-07-11 01:12:52,739 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:12:52,739 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:13:02,786 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:13:02,787 - telegram.bot - DEBUG - []
+2023-07-11 01:13:02,788 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:13:02,788 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:13:12,923 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:13:12,924 - telegram.bot - DEBUG - []
+2023-07-11 01:13:12,925 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:13:12,925 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:13:23,060 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:13:23,061 - telegram.bot - DEBUG - []
+2023-07-11 01:13:23,061 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:13:23,061 - telegram.bot - DEBUG - Entering: get_updates
+2023-07-11 01:13:33,124 - telegram.bot - DEBUG - No new updates found.
+2023-07-11 01:13:33,127 - telegram.bot - DEBUG - []
+2023-07-11 01:13:33,127 - telegram.bot - DEBUG - Exiting: get_updates
+2023-07-11 01:13:33,127 - telegram.bot - DEBUG - Entering: get_updates
