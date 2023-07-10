@@ -5,6 +5,7 @@ CRGB leds_color[SIDELED_NUM_LEDS];
 uint8_t leds_state[SIDELED_NUM_LEDS];
 uint8_t changed = false;
 uint8_t block = false;
+uint8_t leds_brightness[SIDELED_NUM_LEDS];
 
 unsigned long next_blink = 0;
 unsigned long next_effekt = 0;
@@ -14,6 +15,7 @@ void LEDtask(void *arg){
     if(changed) {
       for(int a = 0; a < SIDELED_NUM_LEDS; a++) {
         leds_current[a] = leds_color[a];
+        leds_current[a].nscale8(leds_brightness[a]);
         if(leds_state[a] == SIDELED_STATE_OFF) {
           leds_current[a] = CRGB::Black;
         }
@@ -101,6 +103,15 @@ void set_sideled_color(uint8_t led_start, uint8_t led_end, CRGB color) {
   if(led_start >= SIDELED_NUM_LEDS || led_end > SIDELED_NUM_LEDS || led_start >= led_end) return;
   for(uint8_t a = led_start; a < led_end; a++) {
     leds_color[a] = color;
+  }
+  changed = true;
+}
+
+void set_sideled_brightness(uint8_t led_start, uint8_t led_end, uint8_t brightness) {
+  block = true;
+  if(led_start >= SIDELED_NUM_LEDS || led_end > SIDELED_NUM_LEDS || led_start >= led_end) return;
+  for(uint8_t a = led_start; a < led_end; a++) {
+    leds_brightness[a] = brightness;
   }
   changed = true;
 }
