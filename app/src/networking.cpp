@@ -36,8 +36,8 @@ void mqtt_re_connect() {
   while (!client.connected()) {
     Serial.println("Attempting MQTT connection...");
     if (client.connect(clientId)) {
-      client.subscribe("remotest/ledColors");
-      client.subscribe("lvgl/#");
+      Serial.println("MQTT Connected Successfully!");
+      client.subscribe("remoanton/#");
     } else {
       Serial.println("failed, rc=");
       Serial.println(client.state());

@@ -1,7 +1,7 @@
 #ifndef SIDELED_H_   /* Include guard */
 #define SIDELED_H_
 
-#define SIDELED_NUM_LEDS 60
+#define SIDELED_NUM_LEDS 30
 #define SIDELED_DATA_PIN 26
 
 #define SIDELED_STATE_OFF 0
@@ -23,5 +23,7 @@ void init_sideled();
 void set_sideled_state(uint8_t led_start, uint8_t led_end, uint8_t state);
 
 void set_sideled_color(uint8_t led_start, uint8_t led_end, CRGB color);
+
+void set_sideled_brightness(uint8_t led_start, uint8_t led_end, uint8_t brightness);
 
 #endif /* SIDELED_H_ */
