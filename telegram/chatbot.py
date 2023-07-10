@@ -2,10 +2,11 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
 
 
-class ChatBot():
-
+class ChatBot:
     def start(self, update: Update, context: CallbackContext) -> None:
-        update.message.reply_text('Enter /register to subscribe to temperature change notifications')
+        update.message.reply_text(
+            "Enter /register to subscribe to temperature change notifications"
+        )
 
     def button(self, update: Update, context: CallbackContext) -> None:
         """Parses the CallbackQuery and updates the message text."""
@@ -26,32 +27,46 @@ class ChatBot():
         userid = update.effective_user.id
         if userid not in self.users:
             self.users.append(userid)
-            update.message.reply_text("You subscribed to the temperature notifications. Use /deregister to unsubscribe.")
+            update.message.reply_text(
+                "You subscribed to the temperature notifications. Use /deregister to unsubscribe."
+            )
         else:
             update.message.reply_text(
-                "You already subscribed to the temperature notifications. Use /deregister to unsubscribe.")
+                "You already subscribed to the temperature notifications. Use /deregister to unsubscribe."
+            )
 
     def deregister_command(self, update: Update, context: CallbackContext) -> None:
         """Displays info on how to use the bot."""
         userid = update.effective_user.id
         if userid in self.users:
             self.users.remove(userid)
-            update.message.reply_text("You unsubscribed the temperature notifications. Use /register to subscribe.")
-        else:
             update.message.reply_text(
-                "No subscription found")
+                "You unsubscribed the temperature notifications. Use /register to subscribe."
+            )
+        else:
+            update.message.reply_text("No subscription found")
 
     def send_temperature(self, temp):
         for user in self.users:
             self.updater.bot.send_message(user, f"Temperature changed to: {temp} °C")
 
+    def send_light_change(self, room, attribute, value):
+        for user in self.users:
+            self.updater.bot.send_message(
+                user, f"Light in room {room} changed: {attribute} = {value}"
+            )
+
     def __init__(self, token):
         self.updater = Updater(token)
         # Create the Updater and pass it your bot's token.
-        self.updater.dispatcher.add_handler(CommandHandler('start', self.start))
-        self.updater.dispatcher.add_handler(CommandHandler('help', self.start))
-        self.updater.dispatcher.add_handler(CommandHandler('register', self.register_command))
-        self.updater.dispatcher.add_handler(CommandHandler('deregister', self.deregister_command))
+        self.updater.dispatcher.add_handler(CommandHandler("start", self.start))
+        self.updater.dispatcher.add_handler(CommandHandler("help", self.start))
+        self.updater.dispatcher.add_handler(
+            CommandHandler("register", self.register_command)
+        )
+        self.updater.dispatcher.add_handler(
+            CommandHandler("deregister", self.deregister_command)
+        )
         self.updater.dispatcher.add_handler(CallbackQueryHandler(self.button))
 
         self.users = []
