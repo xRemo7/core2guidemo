@@ -95,6 +95,17 @@ lv_obj_t * add_label(const char * text, lv_coord_t x_ofs, lv_coord_t y_ofs) {
   return label;
 }
 
+lv_obj_t * add_dropdown(const char * dropdownText, lv_coord_t x_ofs, lv_coord_t y_ofs, lv_event_cb_t event_handler)
+{
+    lv_obj_t * ddlist = lv_dropdown_create(lv_scr_act(), NULL);
+    lv_dropdown_set_options(ddlist, dropdownText);
+
+    lv_obj_align(ddlist, NULL, LV_ALIGN_IN_TOP_LEFT, x_ofs, y_ofs);
+    lv_obj_set_event_cb(ddlist, event_handler);
+
+    return ddlist;
+}
+
 
 // https://docs.lvgl.io/7.11/widgets/btn.html#overview
 lv_obj_t * add_button(const char * text, lv_event_cb_t event_cb, lv_coord_t x_ofs, lv_coord_t y_ofs, lv_coord_t w, lv_coord_t h) {
