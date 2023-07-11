@@ -64,6 +64,7 @@ void custom_switch_for_rooms(uint8_t startPin, uint8_t endPin, char *roomName)
     mqtt_publish(("remoanton/rooms/" + std::string(roomName)).c_str(), "on");
     if (lv_checkbox_is_checked(single_color_checkbox))
     {
+      set_sideled_brightness(startPin, endPin, 100);
       mqtt_publish(("remoanton/rooms/" + std::string(roomName) + "/mode/color").c_str(), "red");
       if (lv_checkbox_is_checked(red_checkbox))
       {
